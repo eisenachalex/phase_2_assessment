@@ -1,9 +1,48 @@
 .container {
     margin: 20px auto;
-    width: 600px;
+    width: 880px;
     padding: 0px 20px 20px 20px;
     border: 1px dotted black;
   }
   th {
     text-align: left;
   }
+
+header {
+  background-color:black;
+  height:40px;
+  width:100%;
+  line-height:40px;
+}
+
+header ul {
+  padding:0px;
+  margin:0px;
+  float:right;
+}
+
+header ul li {
+  display:inline;
+}
+
+header ul li a {
+  text-decoration:none;
+  color:white;
+}
+
+
+#login_form {
+  position:absolute;
+  top:40px;
+  right:150px;
+  background-color:black;
+  padding:10px;
+  display:none;
+  border-bottom-right-radius:5px;
+ border-bottom-left-radius:5px;
+ line-height:30px;
+}
+
+#edit_event {
+  line-height:30px;
+}

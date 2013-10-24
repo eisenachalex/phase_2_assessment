@@ -1,23 +1,20 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Log in</h1>
+    <form id="login_form" action="/login" method="post" >
+      <input type="text" placeholder="Email" name="email" /><br/>
+      <input type="password" placeholder="Password" name="password" /><br/>
+      <input type="password" placeholder="Confirm Password" name="confirm_password"/><br/>
+      <input type="submit">
+    </form>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+      <h1>Sign Up</h1>
+    <form action="/sign_up" method="post" >
+      <input type="text" placeholder="First Name" name="post[first_name]" /><br/>
+      <input type="text" placeholder="Lsat Name" name="post[last_name]" /><br/>
+      <input type="text" placeholder="Email" name="post[email]"/><br/>
+      <input type="text" placeholder="Birthday" name="post[birthdate]"/><br/>
+      <input type="password" placeholder="password" name="post[password]" /><br/>
+      <input type="password" placeholder="Confirm" name="post[password_confirmation]"/><br/>
+      <input type="submit">
+    </form>
 </div>

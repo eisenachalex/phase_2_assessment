@@ -1,0 +1,25 @@
+<div class="container">
+<h1>Welcome back, <%= @user.first_name %></h1>
+<h3>Your Created Events</h3>
+  <div id="my_events">
+  <% @user.created_events.each do |x| %>
+  Name: <%= x.name %><br/>
+  Location: <%= x.location %> <a href="/edit_event/<%=x.id%>">Edit this</a><br/><br/>
+  <% end %>
+  </div>
+
+  <h1>Create Event</h1>
+  <form id="create_event" action="create_event" method="post">
+    <input placeholder="Event Name" type="text" name="name" /><br/>
+    <input placeholder="Locatione"type="text" name="location" /><br/>
+    <input placeholder="Starts at"type="text" name="starts_at" /><br/>
+    <input placeholder="Ends at"type="text" name="ends_at" /><br/>
+    <input type="hidden" name="user_id" value="<%= session[:user_id] %>">
+    <input type="submit">
+  </form>
+  <br/>
+  <br/>
+    <a href="/edit_event">Edit An Event</a><br/>
+  <a href="/delete_event">Delete An Event</a><br/>
+    <a href="/logout">Log out</a>
+</div>

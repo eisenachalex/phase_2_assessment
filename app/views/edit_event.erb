@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Edit Event "<%=@this_event.name %>"</h1>
+  <form id="edit_event" action="/edit_event" method="post">
+    <input type="text" name="name" placeholder="<%= @this_event.name %>"><br/>
+        <input type="text" name="location" placeholder="<%= @this_event.location %>"><br/>
+    <input type="text" name="starts_at" placeholder="<%= @this_event.starts_at%>"><br/>
+    <input type="text" name="ends_at" placeholder="<%= @this_event.ends_at %>"><br/>
+    <input type="hidden" name="event_id" value="<%= @this_event.id %>">
+  <input type="submit"><a href="/welcome_back">Return Home</a>
+  </form>
+</div>

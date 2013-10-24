@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Create Event</h1>
+  <form id="create_event" action="create_event" method="post">
+    <input placeholder="Event Name" type="text" name="post[name]" /><br/>
+    <input placeholder="Locatione"type="text" name="post[location]" /><br/>
+    <input placeholder="Starts at"type="text" name="post[starts_at]" /><br/>
+    <input placeholder="Ends at"type="text" name="post[ends_at]" /><br/>
+    <input type="hidden" name="post[user_id]" value="<%= session[:user_id] %>">
+    <input type="submit">
+  </form>
+</div>
